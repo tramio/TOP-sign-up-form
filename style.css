@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=IM+Fell+English&family=Open+Sans&display=swap');
+
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+  font-family: 'Open Sans', 'Tahoma', sans-serif;
+  font-size: 16px;
+}
+h1 {
+  font-family: 'IM Fell English', 'Georgia', serif;
+  font-size: 3rem;
+  color: white;
+}
+.logo-and-title {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#background-area {
+  height: 100%;
+  width: 40%;
+  background-image: url(background-image.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#content-area {
+  width: 60%;
+}
