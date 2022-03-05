@@ -22,41 +22,43 @@
       <p>Whether you are a freelancer, startup or established company, Happy Coworking covers all your business needs.</p>
       <p>Are you looking to settle in a creative hub downtown or an affordable shared office in the suburb? Discover our locations!</p>
     </div>
-    <form action="#" method="POST">
+    <form id="registration-form" action="#" method="POST">
       <p>I want to get started!</p>
       <ul>
         <div>
           <li>
             <label for="first-name-input">First name</label>
-            <input type="text" id="first-name-input" placeholder="John">
+            <input type="text" id="first-name-input" name="firstName" placeholder="John" pattern="^[a-zA-Z]{2,}$" required>
           </li>
           <li>
             <label for="last-name-input">Last name</label>
-            <input type="text" id="first-name-input," placeholder="Doe">
+            <input type="text" id="last-name-input" name="lastName" placeholder="Doe" pattern="^[a-zA-Z]{2,}$" required>
           </li>
           <li>
             <label for="email-input">Email</label>
-            <input type="email" id="email-input" placeholder="mail@example.com">
+            <input type="email" id="email-input" name="email" placeholder="mail@example.com" required>
           </li>
         </div>
         <div>
           <li>
             <label for="phone-number-input">Phone number</label>
-            <input type="tel" id="phone-number-input" placeholder="+44(0) XXXX XXXXXX">
+            <input type="tel" id="phone-number-input" name="phoneNumber" placeholder="+123456789" required>
           </li>
           <li>
             <label for="password-input">Password</label>
-            <input type="password" id="password-input" minlength="8" maxlength="20" placeholder="Between 8-20 characters">
+            <input type="password" id="password-input" name="password" minlength="8" maxlength="20" placeholder="Between 8-20 characters" pattern="(?=^.{8,20}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
           </li>
           <li>
             <label for="password-confirmation-input">Confirm password</label>
-            <input type="password" id="password-confirmation-input" minlength="8" maxlength="20" class="error" placeholder="Your password and confirmation must match">
+            <input type="password" id="password-confirmation-input" minlength="8" maxlength="20" class="error" placeholder="Re-type password" required>
           </li>
         </div>
       </ul>
     </form>
-    <button type="submit">Create account</button>
+    <button type="submit" form="registration-form">Create account</button>
     <p class="regular-paragraph">Already have an account? <a href="#">Log in</a></p>
+    <p id="password-length-error" class="regular-paragraph"> </p>
+    <p id="password-confirmation-error" class="regular-paragraph"> </p>
   </div>
 </body>
 </html>
