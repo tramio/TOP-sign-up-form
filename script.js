@@ -20,7 +20,7 @@ function isEmpty(inputElement) {
   return inputElement.value === "";
 }
 function passwordHasCorrectLength() {
-  return passwordInput.value.length > 8 && passwordInput.value.length < 20;
+  return passwordInput.value.length >= 8 && passwordInput.value.length <= 20;
 }
 function setPasswordLengthMessage() {
   if (!isEmpty(passwordInput) && !passwordHasCorrectLength()) {
