@@ -9,7 +9,7 @@
   <title>Happy Coworking</title>
 </head>
 <body>
-  <div id="background-area">
+  <div class="background-area">
     <div class="logo-and-title">
       <img class="logo" src="icon.png" alt="">
       <h1 class="title">Happy Coworking</h1>
@@ -25,7 +25,6 @@
     <form id="registration-form" action="#" method="POST">
       <p>I want to get started!</p>
       <ul>
-        <div>
           <li>
             <label for="first-name-input">First name</label>
             <input type="text" id="first-name-input" name="firstName" placeholder="John" pattern="^[a-zA-Z]{2,}$" required>
@@ -38,8 +37,6 @@
             <label for="email-input">Email</label>
             <input type="email" id="email-input" name="email" placeholder="mail@example.com" required>
           </li>
-        </div>
-        <div>
           <li>
             <label for="phone-number-input">Phone number</label>
             <input type="tel" id="phone-number-input" name="phoneNumber" placeholder="+123456789" required>
@@ -52,11 +49,10 @@
             <label for="password-confirmation-input">Confirm password</label>
             <input type="password" id="password-confirmation-input" minlength="8" maxlength="20" placeholder="Re-type password" required>
           </li>
-        </div>
       </ul>
     </form>
     <button type="submit" form="registration-form">Create account</button>
-    <p class="regular-paragraph">Already have an account? <a href="#">Log in</a></p>
+    <p id="log-in-message" class="regular-paragraph">Already have an account? <a href="#">Log in</a></p>
     <p id="password-length-error" class="regular-paragraph"> </p>
     <p id="password-confirmation-error" class="regular-paragraph"> </p>
   </div>
